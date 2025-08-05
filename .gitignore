@@ -1,0 +1,22 @@
+# Ignorar directorios de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+env/
+venv/
+# Ignorar archivos específicos del sistema
+.DS_Store # macOS
+Thumbs.db # Windows
+# Ignorar logs y reportes (no deben subir a Git)
+logs/
+reports/
+*.log
+*.txt
+*.db # Para tu base de datos local
+# Ignorar archivos de configuración sensibles (si los tuvieras localmente)
+config/system_config.json # Si usas este archivo localmente para desarrollo
+# Ignorar archivos de paquetes Node (si los tuvieras)
+node_modules/
