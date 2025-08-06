@@ -1,0 +1,43 @@
+# --- SLACK / TELEGRAM ---
+SLACK_PEDIDOS_WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
+SLACK_OPS_ALERT_WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/YYYYYYYYYYYYYYYYYYYYYYYY"
+SLACK_CUSTOMER_SERVICE_WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/ZZZZZZZZZZZZZZZZZZZZZZZZ"
+SLACK_FINANCE_WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/AAAAAAAAAAAAAA"
+# TEAMS_OPS_WEBHOOK_URL="https://outlook.office.com/webhook/..." # Ejemplo si usaras Teams
+
+# --- APIs de E-commerce / CRM / Inventario ---
+INVENTORY_API_BASE_URL="https://api.tu-inventario.com/v1"
+INVENTORY_API_KEY="tu_clave_api_inventario_secreta"
+
+CRM_API_BASE_URL="https://api.tu-crm.com/v1"
+CRM_API_KEY="tu_clave_api_crm_secreta"
+
+# --- APIs de Validación / Enriquecimiento ---
+EMAIL_VALIDATOR_API_URL="https://api.emailvalidator.com/v2"
+EMAIL_VALIDATOR_API_KEY="tu_clave_api_email_validator_secreta"
+
+COMPANY_ENRICHMENT_API_URL="https://api.companyenrichment.com/v1"
+COMPANY_ENRICHMENT_API_KEY="tu_clave_api_company_enrichment_secreta"
+
+# --- APIs de Almacenamiento / Procesamiento de Archivos ---
+# OJO: La URL y la clave dependen de tu proveedor de almacenamiento (AWS S3, Google Cloud Storage, Dropbox, etc.)
+# Esto es un placeholder conceptual, la integración real sería con un SDK específico.
+PROCESSED_FILES_BUCKET_URL="https://tus-archivos-procesados.cloudstorage.com/uploads"
+CLOUD_STORAGE_API_KEY="tu_clave_api_cloud_storage_secreta"
+
+# --- APIs de Reporting / Programación ---
+SALES_API_BASE_URL="https://api.tu-sistema-ventas.com/v2"
+SALES_API_KEY="tu_clave_api_ventas_secreta"
+
+# GOOGLE_SHEETS_API_URL y GOOGLE_SHEETS_API_KEY son conceptuales.
+# Google Sheets usa OAuth2, que es más complejo que una simple API Key.
+# Para un ejemplo real, usarías la librería 'gspread' o 'google-auth-oauthlib'.
+GOOGLE_SHEETS_API_URL="https://sheets.googleapis.com/v4/spreadsheets"
+GOOGLE_SHEETS_API_KEY="tu_clave_api_google_sheets_simple_si_la_tuvieras"
+SALES_REPORT_SHEET_ID="ID_DE_TU_HOJA_DE_GOOGLE_SHEETS"
+
+EMAIL_API_BASE_URL="https://api.sendgrid.com/v3" # O Mailgun, etc.
+EMAIL_API_KEY="SG.tu_clave_api_sendgrid_secreta"
+DAILY_REPORT_RECIPIENT_EMAIL="tu_email_para_reportes@ejemplo.com"
+
+
