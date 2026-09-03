@@ -1,0 +1,23 @@
+name: Generar MD Book (HTML + PDF)
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar libro MD
+        uses: gryphonshafer/GitHub-MD-Book@v4
+        continue-on-error: true
+        with:
+          settings: .github/github-md-book.yml
+      - name: Subir artefactos generados
+        uses: actions/upload-artifact@v7
+        with:
+          name: md-book-output
+          path: output/
+          if-no-files-found: warn
+          retention-days: 7
