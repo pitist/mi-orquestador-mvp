@@ -1,4 +1,4 @@
-name: Google Actions (Testing + Auth + OSV Scanner)
+name: Google Actions (Testing + Auth + OSV Scanner CLI)
 
 on:
   push:
@@ -15,18 +15,18 @@ jobs:
         uses: google-github-actions/test-action@v2.0.1
         continue-on-error: true
 
-      # 2. Autenticación en Google Cloud (opcional, usa secret GCP_SA_KEY)
+      # 2. Autenticación en Google Cloud (opcional)
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v3
         continue-on-error: true
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      # 3. OSV Scanner (escanea vulnerabilidades en dependencias)
-      - name: OSV Scanner
-        uses: google/osv-scanner-action@v2.5.1
+      # 3. OSV Scanner (instalación y ejecución directa, sin la acción rota)
+      - name: Instalar OSV Scanner
+        run: npm install -g osv-scanner
         continue-on-error: true
-        with:
-          scan-args: |-
-            --config=osv-scanner.toml
-            ./...
+
+      - name: Ejecutar OSV Scanner
+        run: osv-scanner --config=osv-scanner.toml ./...
+        continue-on-error: true
